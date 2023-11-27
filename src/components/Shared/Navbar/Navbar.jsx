@@ -29,10 +29,10 @@ const Navbar = () => {
             </Link>
 
             <Link
-              to='/login'
+              to='/Apartment'
               className='px-4 py-3 hover:bg-neutral-100 transition font-semibold'
             >
-              Login
+              Apartment
             </Link>
             </div>
 
