@@ -1,5 +1,6 @@
 
 import About from "./About/About"
+import ApartmentLocation from "./ApartmentLocation/ApartmentLocation"
 import Slider from "./Banner/Slider"
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
       <Slider></Slider>
       <About></About>
+      <ApartmentLocation></ApartmentLocation>
       <h1>Welcome to StayVista</h1>
     </div>
   )
