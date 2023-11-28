@@ -1,6 +1,5 @@
 
 
-/* eslint-disable react/prop-types */
 const Dcard = ({ room }) => {
     return (
        
