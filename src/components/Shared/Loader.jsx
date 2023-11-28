@@ -16,3 +16,4 @@ const Loader = ({ smallHeight }) => {
 }
 
 export default Loader
+
