@@ -1,7 +1,7 @@
 
 
 /* eslint-disable react/prop-types */
-const Card = ({ room }) => {
+const Dcard = ({ room }) => {
     return (
        
             <div className='flex flex-col gap-2 w-full'>
@@ -43,10 +43,10 @@ const Card = ({ room }) => {
                 <p className='font-semibold text-lg'>Apartment No : {room?.ApartmentNo}</p>
                 </div>
                     <h1 className='font-bold text-xl text-orange-600 text-center'>Rent :  {room?.Rent} $ </h1>
-                <button className='btn'>Agreement</button>
+                
             </div>
         
     )
 }
 
-export default Card
+export default Dcard

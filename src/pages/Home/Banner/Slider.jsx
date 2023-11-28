@@ -8,10 +8,16 @@ import img3 from '../../../assets/images/house/john-fornander-tVzyDSV84w8-unspla
 import img4 from '../../../assets/images/house/naomi-ellsworth-EMPLSuvDuhQ-unsplash.jpg';
 import img5 from '../../../assets/images/house/paul-szewczyk-nI4aC1kaTRc-unsplash.jpg';
 import img6 from '../../../assets/images/house/webaliser-_TPTXZd9mOo-unsplash.jpg';
+import Container from '../../../components/Shared/Container';
 
 const Slider = () => {
+
+ 
+
+
   return (
-   
+    <Container>
+
       <Carousel
         autoPlay
         interval={3000}
@@ -38,6 +44,9 @@ const Slider = () => {
           <img className="max-h-[450px]" src={img6} alt="Slide 6" />
         </div>
       </Carousel>
+
+    </Container>
+   
    
   );
 };
