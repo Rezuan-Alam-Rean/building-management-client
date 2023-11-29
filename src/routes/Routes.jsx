@@ -8,6 +8,7 @@ import Apartment from '../pages/Apartment/Apartment'
 import PrivateRoute from './PrivateRoute'
 import DashboardLayout from '../layouts/DashboardLayout'
 import Profile from '../pages/Dashboard/Common/Profile'
+import Announcements from '../pages/Dashboard/Common/Announcements'
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,14 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Profile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: 'Announcements',
+        element: (
+          <PrivateRoute>
+            <Announcements/>
           </PrivateRoute>
         ),
       },

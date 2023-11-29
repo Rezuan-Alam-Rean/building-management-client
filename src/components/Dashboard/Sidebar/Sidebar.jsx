@@ -40,6 +40,7 @@ const Sidebar = () => {
             <Logo />
           </div>
         </div>
+        
 
         <button
           onClick={handleToggle}
@@ -95,9 +96,9 @@ const Sidebar = () => {
             address='/dashboard/profile'
           />
           <MenuItem
-            icon={FcSettings}
-            label='Profile'
-            address='/dashboard/profile'
+            icon={AiOutlineBars}
+            label='Announcements'
+            address='/dashboard/Announcements'
           />
           <button
             onClick={logOut}
