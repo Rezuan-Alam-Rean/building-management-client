@@ -10,17 +10,16 @@ import { BsGraphUp } from 'react-icons/bs'
 import MenuItem from './MenuItem'
 
 import useAuth from '../../../hooks/useAuth'
-import useRole from '../../../hooks/useRole'
-import HostMenu from './HostMenu'
-import GuestMenu from './GuestMenu'
-import AdminMenu from './AdminMenu'
+// import useRole from '../../../hooks/useRole'
+
 import ToggleBtn from '../../Button/ToggleBtn'
+import AdminMenu from '../Menu/AdminMenu'
 
 const Sidebar = () => {
   const { logOut } = useAuth()
   const [toggle, setToggle] = useState(false)
   const [isActive, setActive] = useState(false)
-  const [role] = useRole()
+  // const [role] = useRole()
 
   //   For guest/host menu item toggle button
   const toggleHandler = event => {
@@ -73,16 +72,17 @@ const Sidebar = () => {
                 label='Statistics'
                 address='/dashboard'
               />
-              <MenuItem
+              {/* <MenuItem
                 icon={BsGraphUp}
-                label='Statistics'
-                address='/dashboard'
-              />
+                label='add-Announcement'
+                address='/dashboard/add-Announcement'
+              /> */}
 
               {/* Host Menu Items */}
-              {role === 'guest' && <GuestMenu />}
+              <AdminMenu/>
+              {/* {role === 'guest' && <GuestMenu />}
               {role === 'host' ? toggle ? <HostMenu /> : <GuestMenu /> : ''}
-              {role === 'admin' && <AdminMenu />}
+              {role === 'admin' && <AdminMenu />} */}
             </nav>
           </div>
         </div>
@@ -98,7 +98,7 @@ const Sidebar = () => {
           <MenuItem
             icon={AiOutlineBars}
             label='Announcements'
-            address='/dashboard/Announcements'
+            address='/dashboard/Announcement'
           />
           <button
             onClick={logOut}

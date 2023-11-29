@@ -9,6 +9,7 @@ import PrivateRoute from './PrivateRoute'
 import DashboardLayout from '../layouts/DashboardLayout'
 import Profile from '../pages/Dashboard/Common/Profile'
 import Announcements from '../pages/Dashboard/Common/Announcements'
+import AddAnnouncement from '../pages/Dashboard/Admin/AddAnnouncement'
 
 export const router = createBrowserRouter([
   {
@@ -36,10 +37,10 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
-        path: 'add-room',
+        path: 'add-Announcement',
         element: (
           <PrivateRoute>
-            
+            <AddAnnouncement></AddAnnouncement>
           </PrivateRoute>
         ),
       },
@@ -52,7 +53,7 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path: 'Announcements',
+        path: 'Announcement',
         element: (
           <PrivateRoute>
             <Announcements/>
