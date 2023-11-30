@@ -28,7 +28,7 @@ const MyRoom = () => {
     console.log(rooms);
 
     return (
-        <div>
+        <div className="items-center justify-center">
             {rooms.map(room => (
                 <RoomReservation key={room._id} room={room} />
             ))}

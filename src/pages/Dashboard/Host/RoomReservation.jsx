@@ -27,7 +27,7 @@ console.log(room);
   // console.log(value)
 
   return (
-    <div className='rounded-xl border-[1px] max-w-3xl border-neutral-200 overflow-hidden bg-white'>
+    <div className='m-auto items-center justify-center rounded-xl border-[1px] max-w-3xl border-neutral-200 overflow-hidden bg-white'>
       <div className='flex flex-col items-center gap-1 p-4'>
         <div className='text-xl font-semibold'>Apartment No :{room?.apartmentNo}</div>
         <div className='text-xl font-semibold'>Block Name : {room?.blockName}</div>
@@ -39,7 +39,7 @@ console.log(room);
       <hr />
       
       <hr />
-      <div className='p-4'>
+      <div className='p-4 w-60 m-auto '>
         <Button  label={'Make payment'} />
       </div>
       <hr />

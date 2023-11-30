@@ -6,30 +6,33 @@ import Logo from '../../Shared/Logo'
 import { GrLogout } from 'react-icons/gr'
 import { FcSettings } from 'react-icons/fc'
 import { AiOutlineBars } from 'react-icons/ai'
-import { BsGraphUp } from 'react-icons/bs'
+
 import MenuItem from './MenuItem'
 
 import useAuth from '../../../hooks/useAuth'
-// import useRole from '../../../hooks/useRole'
+import useRole from '../../../hooks/useRole'
 
 import ToggleBtn from '../../Button/ToggleBtn'
-import AdminMenu from '../Menu/AdminMenu'
+import GuestMenu from '../Menu/GuestMenu'
 import HostMenu from '../Menu/HostMenu'
+import AdminMenu from '../Menu/AdminMenu'
 
 const Sidebar = () => {
   const { logOut } = useAuth()
-  const [toggle, setToggle] = useState(false)
+  // const [toggle, setToggle] = useState(false)
   const [isActive, setActive] = useState(false)
-  // const [role] = useRole()
+  const [role] = useRole()
 
   //   For guest/host menu item toggle button
-  const toggleHandler = event => {
-    setToggle(event.target.checked)
-  }
+  // const toggleHandler = event => {
+  //   setToggle(event.target.checked)
+  // }
   // Sidebar Responsive Handler
   const handleToggle = () => {
     setActive(!isActive)
   }
+
+  console.log(role);
   return (
     <>
     
@@ -66,24 +69,23 @@ const Sidebar = () => {
           {/* Nav Items */}
           <div className='flex flex-col justify-between flex-1 mt-6'>
             {/* If a user is host */}
-            {<ToggleBtn toggleHandler={toggleHandler} />}
+            {/* {role === 'host' && <ToggleBtn toggleHandler={toggleHandler} />} */}
+            
             <nav>
-              <MenuItem
-                icon={BsGraphUp}
-                label='Statistics'
-                address='/dashboard'
-              />
-              {/* <MenuItem
-                icon={BsGraphUp}
-                label='add-Announcement'
-                address='/dashboard/add-Announcement'
-              /> */}
-              <HostMenu/>
+
+            <MenuItem
+            icon={AiOutlineBars}
+            label='Announcements'
+            address='/dashboard/Announcement'
+          />
+             
+             
+              {/* <HostMenu/> */}
               {/* Host Menu Items */}
-              <AdminMenu/>
-              {/* {role === 'guest' && <GuestMenu />}
-              {role === 'host' ? toggle ? <HostMenu /> : <GuestMenu /> : ''}
-              {role === 'admin' && <AdminMenu />} */}
+              {/* <AdminMenu/> */}
+              {role === 'guest' && <GuestMenu />}
+              {role === 'host'  && <HostMenu /> }
+              {role === 'admin' && <AdminMenu />}
             </nav>
           </div>
         </div>
@@ -96,11 +98,7 @@ const Sidebar = () => {
             label='Profile'
             address='/dashboard/profile'
           />
-          <MenuItem
-            icon={AiOutlineBars}
-            label='Announcements'
-            address='/dashboard/Announcement'
-          />
+          
           <button
             onClick={logOut}
             className='flex w-full items-center px-4 py-2 mt-5 text-gray-600 hover:bg-gray-300   hover:text-gray-700 transition-colors duration-300 transform'

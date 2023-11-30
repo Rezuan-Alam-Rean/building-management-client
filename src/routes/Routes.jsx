@@ -11,6 +11,9 @@ import Profile from '../pages/Dashboard/Common/Profile'
 import Announcements from '../pages/Dashboard/Common/Announcements'
 import AddAnnouncement from '../pages/Dashboard/Admin/AddAnnouncement'
 import MyRoom from '../pages/Dashboard/Host/MyRoom'
+import HostRoute from './HostRoute'
+import AdminRoute from './AdminRoute'
+import MyBooking from '../pages/Dashboard/Host/MyBooking'
 
 export const router = createBrowserRouter([
   {
@@ -41,7 +44,10 @@ export const router = createBrowserRouter([
         path: 'add-Announcement',
         element: (
           <PrivateRoute>
+            <AdminRoute>
+
             <AddAnnouncement></AddAnnouncement>
+            </AdminRoute>
           </PrivateRoute>
         ),
       },
@@ -66,7 +72,21 @@ export const router = createBrowserRouter([
         path: 'Make-payment',
         element: (
           <PrivateRoute>
+            <HostRoute>
             <MyRoom/>
+
+            </HostRoute>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: 'My-Booking',
+        element: (
+          <PrivateRoute>
+            <HostRoute>
+            
+              <MyBooking/>
+            </HostRoute>
           </PrivateRoute>
         ),
       },
