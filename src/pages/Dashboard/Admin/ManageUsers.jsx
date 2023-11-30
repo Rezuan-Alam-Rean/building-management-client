@@ -1,7 +1,11 @@
-import { useQuery } from '@tanstack/react-query'
-import { Helmet } from 'react-helmet-async'
-import { getAllUsers } from '../../../api/auth'
-import UserDataRow from '../../../components/Dashboard/Sidebar/TableRows/UserDataRow'
+// import { useQuery } from '@tanstack/react-query'
+
+import { useQuery } from "@tanstack/react-query"
+import { getAllUsers } from "../../../api/auth"
+import UserDataRow from "../../../components/Dashboard/Sidebar/TableRows/UserDataRow"
+
+// import { getAllUsers } from '../../../api/auth'
+// import UserDataRow from '../../../components/Dashboard/Sidebar/TableRows/UserDataRow'
 
 const ManageUsers = () => {
   const { data: users = [], refetch } = useQuery({
@@ -13,9 +17,7 @@ const ManageUsers = () => {
   return (
     <>
       <div className='container mx-auto px-4 sm:px-8'>
-        <Helmet>
-          <title>Manage Users</title>
-        </Helmet>
+        
         <div className='py-8'>
           <div className='-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto'>
             <div className='inline-block min-w-full shadow rounded-lg overflow-hidden'>

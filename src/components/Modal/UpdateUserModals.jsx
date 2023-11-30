@@ -4,7 +4,7 @@ import { BsCheckLg } from 'react-icons/bs'
 import { AiOutlineDown } from 'react-icons/ai'
 const roles = ['guest', 'host', 'admin']
 
-const UpdateUserModal = ({ setIsOpen, isOpen, modalHandler, user }) => {
+const UpdateUserModals = ({ setIsOpen, isOpen, modalHandler, user }) => {
   const [selected, setSelected] = useState(user.role)
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -127,4 +127,4 @@ const UpdateUserModal = ({ setIsOpen, isOpen, modalHandler, user }) => {
   )
 }
 
-export default UpdateUserModal
+export default UpdateUserModals
