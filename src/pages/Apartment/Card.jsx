@@ -25,7 +25,7 @@ const Card = ({ room }) => {
                 image: room?.ApartmentImage
             };
 
-            const response = await axios.post('http://localhost:8000/book', bookingData);
+            const response = await axios.post('https://building-management-server-gray.vercel.app/book', bookingData);
             console.log(response.data); // Log the response from the server
 
             // Show success toast
