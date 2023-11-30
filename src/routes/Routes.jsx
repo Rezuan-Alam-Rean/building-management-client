@@ -11,10 +11,12 @@ import Profile from '../pages/Dashboard/Common/Profile'
 import Announcements from '../pages/Dashboard/Common/Announcements'
 import AddAnnouncement from '../pages/Dashboard/Admin/AddAnnouncement'
 import MyRoom from '../pages/Dashboard/Host/MyRoom'
-import HostRoute from './HostRoute'
+
 import AdminRoute from './AdminRoute'
 import MyBooking from '../pages/Dashboard/Host/MyBooking'
 import ManageUsers from '../pages/Dashboard/Admin/ManageUsers'
+import ManageBookings from '../pages/Dashboard/Host/ManageBookings'
+import HostRoute from './HostRoute'
 
 export const router = createBrowserRouter([
   {
@@ -73,10 +75,10 @@ export const router = createBrowserRouter([
         path: 'Make-payment',
         element: (
           <PrivateRoute>
-            <HostRoute>
+            
             <MyRoom/>
 
-            </HostRoute>
+            
           </PrivateRoute>
         ),
       },
@@ -84,10 +86,22 @@ export const router = createBrowserRouter([
         path: 'My-Booking',
         element: (
           <PrivateRoute>
-            <HostRoute>
+            
             
               <MyBooking/>
+            
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: 'manage-bookings',
+        element: (
+          <PrivateRoute>
+            <HostRoute>
+
+             <ManageBookings/>
             </HostRoute>
+            
           </PrivateRoute>
         ),
       },

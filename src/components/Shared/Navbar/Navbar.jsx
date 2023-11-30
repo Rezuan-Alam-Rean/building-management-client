@@ -18,14 +18,14 @@ const Navbar = () => {
             <div className='hidden md:flex' >
             <Link
               to='/'
-              className='  px-4 py-3 hover:bg-neutral-100 transition font-semibold'
+              className='  px-4 py-3 text-red-500  hover:bg-slate-700 transition font-bold'
             >
               Home
             </Link>
 
             <Link
               to='/Apartment'
-              className='px-4 py-3 hover:bg-neutral-100 transition font-semibold'
+              className='px-4 py-3 text-red-500  hover:bg-slate-700 transition font-bold'
             >
               Apartments
             </Link>

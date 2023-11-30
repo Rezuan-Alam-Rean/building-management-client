@@ -1,7 +1,9 @@
 import MenuItem from "../Sidebar/MenuItem"
 import { AiOutlineBars } from 'react-icons/ai'
-const GuestMenu = () => {
+import { MdHomeWork,  } from 'react-icons/md'
 
+
+const GuestMenu = () => {
   
   return (
     <>
@@ -10,6 +12,9 @@ const GuestMenu = () => {
             label='Announcements'
             address='/dashboard/Announcement'
           />
+          <MenuItem icon={MdHomeWork} label='Make payment' address='Make-payment' />
+      <MenuItem icon={MdHomeWork} label='My-Booking' address='My-Booking' />
+
     </>
   )
 }

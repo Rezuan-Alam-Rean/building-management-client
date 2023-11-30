@@ -12,22 +12,18 @@ import MenuItem from './MenuItem'
 import useAuth from '../../../hooks/useAuth'
 import useRole from '../../../hooks/useRole'
 
-import ToggleBtn from '../../Button/ToggleBtn'
+
 import GuestMenu from '../Menu/GuestMenu'
 import HostMenu from '../Menu/HostMenu'
 import AdminMenu from '../Menu/AdminMenu'
 
 const Sidebar = () => {
   const { logOut } = useAuth()
-  // const [toggle, setToggle] = useState(false)
+  
   const [isActive, setActive] = useState(false)
   const [role] = useRole()
 
-  //   For guest/host menu item toggle button
-  // const toggleHandler = event => {
-  //   setToggle(event.target.checked)
-  // }
-  // Sidebar Responsive Handler
+  
   const handleToggle = () => {
     setActive(!isActive)
   }
@@ -73,25 +69,27 @@ const Sidebar = () => {
             
             <nav>
 
-            <MenuItem
-            icon={AiOutlineBars}
-            label='Announcements'
-            address='/dashboard/Announcement'
-          />
+            
              
              
               {/* <HostMenu/> */}
               {/* Host Menu Items */}
               {/* <AdminMenu/> */}
+              {role === 'admin' && <AdminMenu  />}
               {role === 'guest' && <GuestMenu />}
               {role === 'host'  && <HostMenu /> }
-              {role === 'admin' && <AdminMenu />}
             </nav>
           </div>
         </div>
 
         <div>
           <hr />
+
+          <MenuItem
+            icon={AiOutlineBars}
+            label='Announcements'
+            address='/dashboard/Announcement'
+          />
 
           <MenuItem
             icon={FcSettings}
