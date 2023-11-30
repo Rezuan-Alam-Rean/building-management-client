@@ -10,6 +10,7 @@ import DashboardLayout from '../layouts/DashboardLayout'
 import Profile from '../pages/Dashboard/Common/Profile'
 import Announcements from '../pages/Dashboard/Common/Announcements'
 import AddAnnouncement from '../pages/Dashboard/Admin/AddAnnouncement'
+import MyRoom from '../pages/Dashboard/Host/MyRoom'
 
 export const router = createBrowserRouter([
   {
@@ -62,10 +63,10 @@ export const router = createBrowserRouter([
       },
 
       {
-        path: 'my-listings',
+        path: 'Make-payment',
         element: (
           <PrivateRoute>
-            
+            <MyRoom/>
           </PrivateRoute>
         ),
       },

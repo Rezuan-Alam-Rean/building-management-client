@@ -1,11 +1,19 @@
-import { BsFillHouseAddFill } from 'react-icons/bs'
+
 import { MdHomeWork, MdOutlineManageHistory } from 'react-icons/md'
 import MenuItem from '../Sidebar/MenuItem'
 const HostMenu = () => {
+
+
+
+
+
+
+
+  
   return (
     <>
-      <MenuItem icon={BsFillHouseAddFill} label='Add Room' address='add-room' />
-      <MenuItem icon={MdHomeWork} label='My Listings' address='my-listings' />
+      
+      <MenuItem icon={MdHomeWork} label='Make payment' address='Make-payment' />
       <MenuItem
         icon={MdOutlineManageHistory}
         label='Manage Bookings'

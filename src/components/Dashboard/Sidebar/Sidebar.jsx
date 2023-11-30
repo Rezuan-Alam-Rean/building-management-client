@@ -14,6 +14,7 @@ import useAuth from '../../../hooks/useAuth'
 
 import ToggleBtn from '../../Button/ToggleBtn'
 import AdminMenu from '../Menu/AdminMenu'
+import HostMenu from '../Menu/HostMenu'
 
 const Sidebar = () => {
   const { logOut } = useAuth()
@@ -77,7 +78,7 @@ const Sidebar = () => {
                 label='add-Announcement'
                 address='/dashboard/add-Announcement'
               /> */}
-
+              <HostMenu/>
               {/* Host Menu Items */}
               <AdminMenu/>
               {/* {role === 'guest' && <GuestMenu />}

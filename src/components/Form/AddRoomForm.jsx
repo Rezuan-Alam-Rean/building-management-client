@@ -19,7 +19,7 @@ const AddRoomForm = ({
                 Title
               </label>
               <input
-                className='w-full px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md '
+                className='w-96 h-20 px-4 py-3 text-gray-800 border border-rose-300 focus:outline-rose-500 rounded-md '
                 name='title'
                 id='title'
                 type='text'
