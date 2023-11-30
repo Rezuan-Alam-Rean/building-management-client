@@ -6,14 +6,39 @@
 // import { formatDistance } from 'date-fns'
 // import { useState } from 'react'
 
+import { useState } from "react";
 import Button from "../../../components/Button/Button"
+import BookingModal from "../../../components/Modal/BookingModal";
+import useAuth from "../../../hooks/useAuth";
 
 const RoomReservation = ({ room }) => {
-//   const [value, setValue] = useState({
-//     startDate: new Date(room?.from),
-//     endDate: new Date(room?.to),
-//     key: 'selection',
-//   })
+
+  let [isOpen, setIsOpen] = useState(false)
+  const { user } = useAuth()
+
+
+
+  const closeModal = () => {
+    setIsOpen(false)
+  }
+
+
+  const [bookingInfo, setBookingInfo] = useState({
+   
+    guest: {
+      name: user?.displayName,
+      email: user?.email,
+      image: user?.photoURL,
+    },
+    
+      floorNo: room?.floorNo,
+      blockName: room?.blockName,
+      apartmentNo: room?.apartmentNo,
+      rent: room?.rent,
+      rImage: room?.image,
+      roomId: room?._id,
+  })
+
 
 console.log(room);
 
@@ -33,16 +58,27 @@ console.log(room);
         <div className='text-xl font-semibold'>Block Name : {room?.blockName}</div>
         <div className='text-xl font-semibold'>floor No : {room?.floorNo}</div>
        
-        <div className='text-2xl font-semibold'>$ {room?.rent}</div>
+        <div className='text-2xl text-red-700 font-semibold'>Rent : {room?.rent} $</div>
+        <img className="max-w-xs" src={room?.image} alt="" />
+        
         
       </div>
       <hr />
       
       <hr />
       <div className='p-4 w-60 m-auto '>
-        <Button  label={'Make payment'} />
+        <Button 
+        
+        onClick={() => setIsOpen(true)}
+        label={'Make payment'} />
       </div>
       <hr />
+
+      <BookingModal
+        closeModal={closeModal}
+        isOpen={isOpen}
+        bookingInfo={bookingInfo}
+      />
       
     </div>
   )

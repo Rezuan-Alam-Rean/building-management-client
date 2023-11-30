@@ -6,7 +6,7 @@ import { ImSpinner9 } from 'react-icons/im'
 import {
   createPaymentIntent,
   saveBookingInfo,
-  updateStatus,
+  
 } from '../../api/bookings'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
@@ -21,8 +21,8 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
   const navigate = useNavigate()
   useEffect(() => {
     // create payment intent
-    if (bookingInfo.price > 0) {
-      createPaymentIntent({ price: bookingInfo.price }).then(data => {
+    if (bookingInfo.rent > 0) {
+      createPaymentIntent({ rent: bookingInfo.rent }).then(data => {
         console.log(data.clientSecret)
         setClientSecret(data.clientSecret)
       })
@@ -87,10 +87,10 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
         await saveBookingInfo(paymentInfo)
 
         // Update room status in db
-        await updateStatus(bookingInfo.roomId, true)
+        // await updateStatus(bookingInfo.roomId, true)
         const text = `Booking Successful! ${paymentIntent.id}`
         toast.success(text)
-        navigate('/dashboard/my-bookings')
+        navigate('/dashboard/My-Booking')
       } catch (err) {
         console.log(err)
         toast.error(err.message)
@@ -137,7 +137,7 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
             {processing ? (
               <ImSpinner9 className='m-auto animate-spin' size={24} />
             ) : (
-              `Pay ${bookingInfo.price}$`
+              `Pay ${bookingInfo.rent}$`
             )}
           </button>
         </div>

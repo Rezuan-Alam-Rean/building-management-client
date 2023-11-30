@@ -22,9 +22,10 @@ const Card = ({ room }) => {
                 blockName: room?.BlockName,
                 apartmentNo: room?.ApartmentNo,
                 rent: room?.Rent,
+                image: room?.ApartmentImage
             };
 
-            const response = await axios.post('http://localhost:8000/bookings', bookingData);
+            const response = await axios.post('http://localhost:8000/book', bookingData);
             console.log(response.data); // Log the response from the server
 
             // Show success toast
