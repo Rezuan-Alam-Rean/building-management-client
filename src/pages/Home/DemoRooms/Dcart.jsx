@@ -33,9 +33,9 @@ const Dcard = ({ room }) => {
                     ></div>
                 </div>
                 <div className='flex flex-row items-center gap-1 justify-evenly'>
-                    {/* <p className='font-semibold'>Floor No : {room?.FloorNo}</p>
+                    <p className='font-semibold'>Floor No : {room?.FloorNo}</p>
                     <h1 className='font-semibold '> Block Name : {room.BlockName}</h1>
-                     */}
+                    
                 </div>
                 <div className='flex flex-row items-center gap-1 justify-evenly'>
 
