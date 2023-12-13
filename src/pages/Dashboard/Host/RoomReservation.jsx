@@ -6,38 +6,38 @@
 // import { formatDistance } from 'date-fns'
 // import { useState } from 'react'
 
-import { useState } from "react";
+// import { useState } from "react";
 import Button from "../../../components/Button/Button"
-import BookingModal from "../../../components/Modal/BookingModal";
-import useAuth from "../../../hooks/useAuth";
+// import BookingModal from "../../../components/Modal/BookingModal";
+// import useAuth from "../../../hooks/useAuth";
 
 const RoomReservation = ({ room }) => {
 
-  let [isOpen, setIsOpen] = useState(false)
-  const { user } = useAuth()
+  // let [isOpen, setIsOpen] = useState(false)
+  // const { user } = useAuth()
 
 
 
-  const closeModal = () => {
-    setIsOpen(false)
-  }
+  // const closeModal = () => {
+  //   setIsOpen(false)
+  // }
 
 
-  const [bookingInfo, setBookingInfo] = useState({
+  // const [bookingInfo, setBookingInfo] = useState({
    
-    guest: {
-      name: user?.displayName,
-      email: user?.email,
-      image: user?.photoURL,
-    },
+  //   guest: {
+  //     name: user?.displayName,
+  //     email: user?.email,
+  //     image: user?.photoURL,
+  //   },
     
-      floorNo: room?.floorNo,
-      blockName: room?.blockName,
-      apartmentNo: room?.apartmentNo,
-      rent: room?.rent,
-      rImage: room?.image,
-      roomId: room?._id,
-  })
+  //     floorNo: room?.floorNo,
+  //     blockName: room?.blockName,
+  //     apartmentNo: room?.apartmentNo,
+  //     rent: room?.rent,
+  //     rImage: room?.image,
+  //     roomId: room?._id,
+  // })
 
 
 console.log(room);
@@ -69,16 +69,16 @@ console.log(room);
       <div className='p-4 w-60 m-auto '>
         <Button 
         
-        onClick={() => setIsOpen(true)}
+        // onClick={() => setIsOpen(true)}
         label={'Make payment'} />
       </div>
       <hr />
 
-      <BookingModal
+      {/* <BookingModal
         closeModal={closeModal}
         isOpen={isOpen}
         bookingInfo={bookingInfo}
-      />
+      /> */}
       
     </div>
   )

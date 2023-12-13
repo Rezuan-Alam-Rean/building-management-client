@@ -28,7 +28,7 @@ const Sidebar = () => {
     setActive(!isActive)
   }
 
-  console.log(role);
+  
   return (
     <>
     
