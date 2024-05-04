@@ -25,7 +25,7 @@ const MyRoom = () => {
             });
     }, [user]);
 
-    console.log(rooms);
+    // console.log(rooms);
 
     return (
         <div className="items-center justify-center">

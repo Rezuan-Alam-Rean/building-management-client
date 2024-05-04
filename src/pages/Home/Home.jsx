@@ -10,21 +10,21 @@ import DemoRooms from "./DemoRooms/DemoRooms"
 
 const Home = () => {
 
- 
+
 
 
   return (
     <div>
-<Helmet>
-  <title>Putul's Paradise || Home</title>
-</Helmet>
+      <Helmet>
+        <title>Putul's Paradise || Home</title>
+      </Helmet>
 
       <Slider></Slider>
       <Banner></Banner>
       <About></About>
       <ApartmentLocation></ApartmentLocation>
       <DemoRooms></DemoRooms>
-      
+
     </div>
   )
 }

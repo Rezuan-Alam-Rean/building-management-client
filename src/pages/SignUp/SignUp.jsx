@@ -27,15 +27,15 @@ const SignUp = () => {
 
       //3. Save username & profile photo
       await updateUserProfile(name, imageData?.data?.display_url)
-      console.log(result)
+      // console.log(result)
 
       //4. save user data in database
-      const dbResponse = await saveUser(result?.user)
-      console.log(dbResponse)
+      // const dbResponse = await saveUser(result?.user)
+      // console.log(dbResponse)
       // result.user.email
 
       //5. get token
-      await getToken(result?.user?.email)
+      // await getToken(result?.user?.email)
       navigate('/')
       toast.success('Signup Successful')
     } catch (err) {
@@ -51,11 +51,11 @@ const SignUp = () => {
       const result = await signInWithGoogle()
 
       //4. save user data in database
-      const dbResponse = await saveUser(result?.user)
-      console.log(dbResponse)
+      // const dbResponse = await saveUser(result?.user)
+      // console.log(dbResponse)
 
       //5. get token
-      await getToken(result?.user?.email)
+      // await getToken(result?.user?.email)
       navigate('/')
       toast.success('Signup Successful')
     } catch (err) {
@@ -156,6 +156,7 @@ const SignUp = () => {
         </div>
         <div
           onClick={handleGoogleSignIn}
+
           className='flex justify-center items-center space-x-2 border m-3 p-2 border-gray-300 border-rounded cursor-pointer'
         >
           <FcGoogle size={32} />

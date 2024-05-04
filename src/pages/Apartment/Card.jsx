@@ -8,9 +8,9 @@ import toast from "react-hot-toast";
 const Card = ({ room }) => {
 
     const { user } = useAuth()
-    console.log(user?.email);
-    console.log(user?.displayName);
-    console.log(user);
+    // console.log(user?.email);
+    // console.log(user?.displayName);
+    // console.log(user);
 
 
     const handleAgreement = async () => {
@@ -25,8 +25,8 @@ const Card = ({ room }) => {
                 image: room?.ApartmentImage
             };
 
-            const response = await axios.post('https://building-management-server-gray.vercel.app/book', bookingData);
-            console.log(response.data); // Log the response from the server
+            const response = await axios.post('http://localhost:8000/book', bookingData);
+            // console.log(response.data); // Log the response from the server
 
             // Show success toast
             toast.success('Agreement successful! !');

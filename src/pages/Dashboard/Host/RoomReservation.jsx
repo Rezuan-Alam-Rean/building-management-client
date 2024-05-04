@@ -40,7 +40,7 @@ const RoomReservation = ({ room }) => {
   // })
 
 
-console.log(room);
+// console.log(room);
 
   //   Total days * price
   // const totalDays = parseInt(

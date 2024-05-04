@@ -13,7 +13,7 @@ const UserDataRow = ({ user, refetch }) => {
   const modalHandler = async role => {
     try {
       const data = await updateRole({ email: user?.email, role })
-      console.log(data)
+      // console.log(data)
       refetch()
       toast.success('User role updated!')
     } catch (err) {

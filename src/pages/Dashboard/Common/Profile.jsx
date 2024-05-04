@@ -5,10 +5,12 @@ import { Helmet } from 'react-helmet-async'
 const Profile = () => {
   const { user } = useAuth()
   const [role] = useRole()
-  
-  
 
-  console.log(user)
+  console.log();
+
+
+
+  // console.log(user)
   return (
     <div className='flex justify-center items-center h-screen'>
       <Helmet>

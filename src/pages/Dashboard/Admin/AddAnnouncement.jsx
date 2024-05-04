@@ -23,7 +23,7 @@ const AddAnnouncement = () => {
 
         try {
             const data = await Announcement(roomData);
-            console.log(data);
+            // console.log(data);
 
             toast.success('Announcement Added!');
             navigate('/dashboard'); // Using navigate for navigation
@@ -34,7 +34,7 @@ const AddAnnouncement = () => {
             setLoading(false);
         }
 
-        console.table(roomData);
+        // console.table(roomData);
     };
 
     return (

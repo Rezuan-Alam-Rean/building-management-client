@@ -56,7 +56,7 @@ const AddRoom = () => {
 
     try {
       const data = await addRoom(roomData)
-      console.log(data)
+      // console.log(data)
       setUploadButtonText('Uploaded!')
       toast.success('Room Added!')
       navigate('/dashboard/my-listings')
@@ -67,12 +67,12 @@ const AddRoom = () => {
       setLoading(false)
     }
 
-    console.table(roomData)
+    // console.table(roomData)
   }
 
   // Handle date change from react-date-range calender
   const handleDates = ranges => {
-    console.log(ranges)
+    // console.log(ranges)
     setDates(ranges.selection)
   }
 

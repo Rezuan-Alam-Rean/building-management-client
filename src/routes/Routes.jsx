@@ -28,8 +28,9 @@ export const router = createBrowserRouter([
         path: '/',
         element: <Home />,
       },
-      { path: '/Apartment', 
-      element: <PrivateRoute> <Apartment></Apartment> </PrivateRoute> , 
+      {
+        path: '/Apartment',
+        element:  <Apartment></Apartment> ,
       },
     ],
   },
@@ -38,86 +39,75 @@ export const router = createBrowserRouter([
   {
     path: '/dashboard',
     element: (
-      <PrivateRoute>
+      
         <DashboardLayout></DashboardLayout>
-      </PrivateRoute>
+     
     ),
     children: [
       {
         path: 'add-Announcement',
         element: (
-          <PrivateRoute>
-            <AdminRoute>
-
-            <AddAnnouncement></AddAnnouncement>
-            </AdminRoute>
-          </PrivateRoute>
+         
+              <AddAnnouncement></AddAnnouncement>
+         
         ),
       },
       {
         path: 'profile',
         element: (
-          <PrivateRoute>
+          
             <Profile />
-          </PrivateRoute>
+         
         ),
       },
       {
         path: 'Announcement',
         element: (
-          <PrivateRoute>
-            <Announcements/>
-          </PrivateRoute>
+        
+            <Announcements />
+        
         ),
       },
 
       {
         path: 'Make-payment',
         element: (
-          <PrivateRoute>
-            
-            <MyRoom/>
+         
 
-            
-          </PrivateRoute>
+            <MyRoom />
+
+
+        
         ),
       },
       {
         path: 'My-Booking',
         element: (
-          <PrivateRoute>
-            
-            
-              <MyBooking/>
-            
-          </PrivateRoute>
+         
+
+
+            <MyBooking />
+
+          
         ),
       },
       {
         path: 'manage-bookings',
         element: (
-          <PrivateRoute>
-            <HostRoute>
-
-             <ManageBookings/>
-            </HostRoute>
-            
-          </PrivateRoute>
+      
+              <ManageBookings />
+         
         ),
       },
       {
         path: 'manage-users',
         element: (
-          <PrivateRoute>
-            <AdminRoute>
+       
+              <ManageUsers></ManageUsers>
 
-            <ManageUsers></ManageUsers>
-
-            </AdminRoute>
-          </PrivateRoute>
         ),
       },
     ],
   },
-  
+
 ])

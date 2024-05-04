@@ -23,7 +23,7 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
     // create payment intent
     if (bookingInfo.rent > 0) {
       createPaymentIntent({ rent: bookingInfo.rent }).then(data => {
-        console.log(data.clientSecret)
+        // console.log(data.clientSecret)
         setClientSecret(data.clientSecret)
       })
     }
@@ -52,7 +52,7 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
       setCardError(error.message)
     } else {
       setCardError('')
-      console.log('payment method', paymentMethod)
+      // console.log('payment method', paymentMethod)
     }
 
     setProcessing(true)
@@ -74,7 +74,7 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
       setCardError(confirmError.message)
     }
 
-    console.log('payment intent', paymentIntent)
+    // console.log('payment intent', paymentIntent)
 
     if (paymentIntent.status === 'succeeded') {
       const paymentInfo = {

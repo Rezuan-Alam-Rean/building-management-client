@@ -22,7 +22,7 @@ const Login = () => {
       //2. User Login
       const result = await signIn(email, password)
       //5. get token
-      await getToken(result?.user?.email)
+      // await getToken(result?.user?.email)
 
       navigate(from, { replace: true })
       toast.success('Login Successful')
@@ -39,17 +39,18 @@ const Login = () => {
       const result = await signInWithGoogle()
 
       //4. save user data in database
-      const dbResponse = await saveUser(result?.user)
-      console.log(dbResponse)
+      // const dbResponse = await saveUser(result?.user)
+      // console.log(dbResponse)
 
       //5. get token
-      await getToken(result?.user?.email)
+      // await getToken(result?.user?.email)
       navigate(from, { replace: true })
       toast.success('Login Successful')
     } catch (err) {
       console.log(err)
       toast.error(err?.message)
     }
+    
   }
   return (
     <div className='flex justify-center items-center min-h-screen'>
