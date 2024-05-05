@@ -9,3 +9,12 @@ export const imageUpload = async image => {
   )
   return data
 }
+
+
+export const openGoogleMaps = () => {
+  const latitude = 23.8126;
+const longitude = 90.3654;
+
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
+    window.open(url, '_blank');
+};

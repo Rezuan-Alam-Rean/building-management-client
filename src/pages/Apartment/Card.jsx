@@ -42,7 +42,7 @@ const Card = ({ room }) => {
 
     return (
 
-        <div className='flex flex-col gap-2 w-full'>
+        <div className='flex mt-20  flex-col gap-2 w-full'>
             <div
                 className='
               aspect-square 

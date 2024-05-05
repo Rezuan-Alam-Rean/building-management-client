@@ -41,7 +41,7 @@ const Apartment = () => {
     <div>
       <Container>
         <Helmet>
-          <title>Putul's Paradise || Apartments</title>
+          <title>Sea Paradise || Apartments</title>
         </Helmet>
 
 
