@@ -7,9 +7,10 @@ const Banner = () => {
     const couponCode = 'RENT20'; // Coupon code for 20% off
 
     return (
-        <Container>
-            <div className="bg-gradient-to-r from-slate-700 to-slate-900 py-8">
-                <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-x-10 items-center justify-between px-4">
+        
+            <div className="bg-slate-900 ">
+               <Container>
+               <div className=" pt-10 md:px-20 flex flex-col md:flex-row gap-x-10 items-center justify-between ">
                     <div className="md:w-1/2 mb-4 md:mb-0">
                         <img src={imageUrl} alt="House" className="rounded-lg w-full shadow-lg" />
                     </div>
@@ -20,9 +21,10 @@ const Banner = () => {
                         <p className="text-base md:text-lg">Limited time offer. Apply at checkout.</p>
                     </div>
                 </div>
+               </Container>
             </div>
 
-        </Container>
+      
 
     );
 };

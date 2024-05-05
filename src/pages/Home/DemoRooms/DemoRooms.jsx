@@ -28,13 +28,14 @@ const DemoRooms = () => {
   if (loading) return <Loader />;
 
   return (
-    <Container>
-        
+   
+      <div className="bg-slate-900 md:px-20 ">
+        <Container>
         <div>
-            <p className="text-center text-3xl font-bold mt-5 ">Some Demo Rooms </p>
+            <p className="text-center text-3xl font-bold text-white "> Demo Rooms </p>
         </div>
         
-      <div className='pt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mb-10 gap-5 md:gap-16 p-5 md:px-20'>
+      <div className='pt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-5 md:gap-16 '>
 
       
 
@@ -42,8 +43,12 @@ const DemoRooms = () => {
          <Dcard key={room._id} room={room} ></Dcard>
         ))}
       </div>
+        </Container>
+
+      </div>
+        
       
-    </Container>
+   
   );
 };
 

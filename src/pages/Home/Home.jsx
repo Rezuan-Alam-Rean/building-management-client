@@ -6,6 +6,7 @@ import About from "./About/About"
 import Banner from "./Banner/Banner"
 import Slider from "./Banner/Slider"
 import DemoRooms from "./DemoRooms/DemoRooms"
+import SliderCards from "./Banner/SliderCards"
 
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
 
       <Slider></Slider>
       <About   ></About>
-     
+     <SliderCards/>
       <DemoRooms></DemoRooms>
       <Banner></Banner>
 
