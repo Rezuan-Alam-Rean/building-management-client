@@ -7,6 +7,8 @@ import avatarImg from '../../../assets/images/placeholder.jpg'
 
 const MenuDropdown = () => {
   const [isOpen, setIsOpen] = useState(false)
+
+
   const { user, logOut } = useAuth()
   
 
@@ -15,7 +17,7 @@ const MenuDropdown = () => {
       <div className='flex flex-row items-center gap-3'>
         {/* Become A Host btn */}
         <div className=' md:block'>
-         <p className='text-lg font-extrabold font-serif'>
+         <p className='text-lg text-white font-extrabold font-serif'>
          Putul's Paradise
        </p>
        </div>
