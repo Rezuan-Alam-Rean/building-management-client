@@ -1,81 +1,110 @@
-import React, { useState } from 'react';
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import image1 from "../../../assets/images/hotel/pexels-pixabay-258154 (1).jpg";
 const SliderCards = () => {
-  // Card data array
-  const cardData = [
-    {
-      id: 1,
-      title: 'Card Title 1',
-      content: 'This is the content for card 1.'
-    },
-    {
-      id: 2,
-      title: 'Card Title 2',
-      content: 'This is the content for card 2.'
-    },
-    {
-      id: 3,
-      title: 'Card Title 3',
-      content: 'This is the content for card 3.'
-    },
-    {
-      id: 4,
-      title: 'Card Title 4',
-      content: 'This is the content for card 4.'
-    },
-    {
-      id: 5,
-      title: 'Card Title 5',
-      content: 'This is the content for card 5.'
-    }
-  ];
+    // Card data array
+    const cardData = [
+        {
+          id: 1,
+          title: 'Cox\'s Bazar Beach Sunrise',
+          content: '2 Resorts',
+          image: 'https://i.ibb.co/LkLpbQN/pexels-travis-rupert-379220-1032650.jpg' 
+        },
+        {
+          id: 2,
+          title: 'Sandy Shores of Cox\'s Bazar',
+          content: '6 Resorts',
+          image: 'https://i.ibb.co/3S6g3Px/pexels-pixabay-67566.jpg' 
+        },
+        {
+          id: 3,
+          title: 'Cox\'s Bazar Surfing Wave',
+          content: '4 Resorts.',
+          image: 'https://i.ibb.co/XFMx3FL/pexels-daniel-jurin-358265-1835718.jpg' 
+        },
+        {
+          id: 4,
+          title: 'Tropical Paradise of Cox\'s Bazar',
+          content: '8 Resorts',
+          image: 'https://i.ibb.co/ky9Rm2R/pexels-pixabay-237272.jpg' 
+        },
+        {
+          id: 5,
+          title: 'Cultural Heritage of Cox\'s Bazar',
+          content: '12 Resorts',
+          image: 'https://i.ibb.co/9Hr0ccB/pexels-rushow-122107-2.jpg' 
+        }
+      ];
+      
 
-  const [visibleCards, setVisibleCards] = useState(cardData.slice(0, 3));
+    var settings = {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
 
-  const handleNextCard = () => {
-    setVisibleCards((prevCards) => {
-      const nextIndex = cardData.indexOf(prevCards[2]) + 1;
-      return nextIndex < cardData.length
-        ? [prevCards[1], prevCards[2], cardData[nextIndex]]
-        : prevCards;
-    });
-  };
+    return (
+        <div className="w-4/5 m-auto">
+            <div className='mt-10 mb-10 '>
+                <div className="text-white mb-8 ">
+                    <h2 className="text-4xl mb-3">Explore Cox's Bazar</h2>
+                    <h5>These popular destinations have a lot to offer</h5>
+                </div>
+                <Slider  {...settings}>
+                    {
+                        cardData.map(
+                            (d) => (
+                                <div key={d.id} className="max-[350px] mx-auto space-y-6 rounded-2xl  px-6 py-4  md:w-[350px]">
+                                    {/* Card Image */}
+                                    <img width={350} height={190} className="h-[190px] w-[350px] rounded-2xl bg-gray-400" src={d.image} alt="card navigate ui" />
+                                    {/* Card Heading */}
+                                    <div className="space-y-2">
+                                        <h2 className="font-medium text-slate-800 sm:text-lg md:text-xl dark:text-white/90">{d.title}</h2>
+                                        <h2 className="font-medium text-slate-800  dark:text-white/90">{d.content}</h2>
+                                        {/* rating  */}
+                                       
+                                    </div>
+                                   
+                                </div>
+                            )
 
-  const handlePreviousCard = () => {
-    setVisibleCards((prevCards) => {
-      const prevIndex = cardData.indexOf(prevCards[0]) - 1;
-      return prevIndex >= 0
-        ? [cardData[prevIndex], prevCards[0], prevCards[1]]
-        : prevCards;
-    });
-  };
+                        )
+                    }
+                </Slider>
+            </div>
 
-  return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <div className="flex space-x-4">
-        {visibleCards.map((card) => (
-          <div key={card.id} className="bg-white rounded-lg shadow-lg p-6 w-64">
-            <h2 className="text-xl font-semibold mb-2">{card.title}</h2>
-            <p>{card.content}</p>
-          </div>
-        ))}
-      </div>
-      <div className="mt-4">
-        <button
-          onClick={handlePreviousCard}
-          className="btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-        >
-          Previous
-        </button>
-        <button
-          onClick={handleNextCard}
-          className="btn bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 ml-2"
-        >
-          Next
-        </button>
-      </div>
-    </div>
-  );
+        </div>
+    );
 };
 
 export default SliderCards;

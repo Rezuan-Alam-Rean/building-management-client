@@ -29,7 +29,7 @@ const DemoRooms = () => {
 
   return (
    
-      <div className="bg-slate-900 md:px-20 ">
+      <div className="bg-slate-900 mb-16 md:px-16 ">
         <Container>
         <div>
             <p className="text-center text-3xl font-bold text-white "> Demo Rooms </p>

@@ -6,7 +6,7 @@ import MenuDropdown from './MenuDropdown'
 
 const Navbar = () => {
   return (
-    <div className='fixed w-full glass z-10 px-10 md:px-0 '>
+    <div className='fixed w-full z-10  backdrop-filter backdrop-blur-sm px-10 md:px-0 '>
       <div className='py-4 '>
         <Container>
           <div className='flex flex-row  items-center justify-between gap-3 md:gap-0'>
@@ -17,17 +17,17 @@ const Navbar = () => {
        </p>
             </Link>
 
-            <div className='hidden md:flex' >
+            <div className='hidden ' >
               <Link
                 to='/'
-                className='  px-4 py-3 text-white   font-bold'
+                className='  px-4 py-3 text-orange-500   font-bold'
               >
                 Home
               </Link>
 
               <Link
                 to='/Apartment'
-                className='px-4 py-3 text-white   font-bold'
+                className='px-4 py-3 text-orange-500   font-bold'
               >
                 Apartments
               </Link>

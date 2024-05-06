@@ -1,15 +1,11 @@
 import { Link } from 'react-router-dom'
-import logoImg from '../../assets/images/house/b-logo.jpg'
+// import logoImg from '../../assets/images/house/b-logo.jpg'
 const Logo = () => {
   return (
     <Link to='/'>
-      <img
-        className=' md:block'
-        src={logoImg}
-        alt='logo'
-        width='65'
-        height='100'
-      />
+      <p className=' text-black  font-extrabold text-lg '>
+        <span className='text-orange-500' > SEA</span> PARADISE 
+       </p>
     </Link>
   )
 }

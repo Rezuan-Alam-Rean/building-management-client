@@ -32,7 +32,7 @@ const Slider = () => {
         <div className="absolute inset-0 flex items-center justify-center w-full h-full">
           <div className=" space-y-2 mt-20 text-center text-white">
             <h2 className="font-bold text-3xl md:text-4xl">LUXURY REDEFINED, UNWIND INDULGE</h2>
-            <p className="text-2xl">International standard with local flavours</p>
+            <p className="text-xl">International standard with local flavours</p>
           </div>
         </div>
         <div className="absolute flex justify-between w-full px-4 transform -translate-y-1/2 bottom-0">
