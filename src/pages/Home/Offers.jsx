@@ -20,11 +20,11 @@ const Offers = () => {
 
             <div className=" justify-center items-center space-y-5 flex flex-col md:flex-row   gap-x-5">
                 <div className="w-full md:w-1/2 pt-5 px-2">
-                    <div className="card card-side bg-base-100 w-full h-56 shadow-xl">
+                    <div className="card card-side bg-slate-700  w-full h-56 ">
                 <figure><img className="h-full w-48" src={image1} alt="offers" /></figure>
                         <div className="card-body">
-                            <h2 className="card-title">New movie is released!</h2>
-                            <p>Click the button to watch on Jetflix app.</p>
+                            <h2 className="card-title ">Planning a trip to the 2024 Summer Games?</h2>
+                            <p className="text-sm text-slate-300">Brussels is a quick train ride from all the action.</p>
                             <div className="card-actions justify-end">
                                 {/* <button className="btn btn-primary">Watch</button> */}
                             </div>
@@ -32,11 +32,11 @@ const Offers = () => {
                     </div>
                 </div>
                 <div className="w-full md:w-1/2  px-2">
-                    <div className="card card-side bg-base-100 w-full h-56 shadow-xl z-0 image-full">
+                    <div className="card card-side bg-base-100 w-full h-56 shadow-xl z-0  image-full">
                         <figure><img src={image2}alt="offer" /></figure>
-                        <div className="card-body">
-                            <h2 className="card-title">Shoes!</h2>
-                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div className="card-body  ">
+                            <h2 className="card-title text-white">Seize the moment</h2>
+                            <p className="text-slate-300">Save 15% or more when you book and stay before 1 October 2024</p>
                             <div className="card-actions justify-end">
                                 {/* <button className="btn btn-primary">Buy Now</button> */}
                             </div>
