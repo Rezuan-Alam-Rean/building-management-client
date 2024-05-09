@@ -72,9 +72,8 @@ const Sidebar = () => {
             
              
              
-              {/* <HostMenu/> */}
-              {/* Host Menu Items */}
-              {/* <AdminMenu/> */}
+          
+             
               {/* {role === 'admin' && <AdminMenu  />}
               {role === 'guest' && <GuestMenu />}
               {role === 'host'  && <HostMenu /> } */}
