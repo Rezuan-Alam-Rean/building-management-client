@@ -64,7 +64,7 @@ const Sidebar = () => {
 
          
           <div className='flex flex-col justify-between flex-1 mt-6'>
-            {/* If a user is host */}
+           
             {/* {role === 'host' && <ToggleBtn toggleHandler={toggleHandler} />} */}
             
             <nav>
