@@ -76,7 +76,7 @@ const Sidebar = () => {
              
               {/* {role === 'admin' && <AdminMenu  />}
               {role === 'guest' && <GuestMenu />}
-              {role === 'host'  && <HostMenu /> } */}
+               */}
               <AdminMenu  />
               <GuestMenu />
               <HostMenu /> 
