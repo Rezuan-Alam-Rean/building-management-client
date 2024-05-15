@@ -8,6 +8,7 @@ import Slider from "./Banner/Slider"
 import DemoRooms from "./DemoRooms/DemoRooms"
 import SliderCards from "./Banner/SliderCards"
 import Offers from "./Offers"
+import Rooms from "../../components/Rooms/Rooms"
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
       </Helmet>
 
       <Slider></Slider>
+      <Rooms></Rooms>
      <SliderCards/>
       <Offers/>
       <About   ></About>

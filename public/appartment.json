@@ -1,0 +1,79 @@
+[
+    {
+      "ApartmentImage": "https://i.ibb.co/q1jwFp7/collov-home-design-wy-BKACF3-EFs-unsplash.jpg",
+      "FloorNo": 5,
+      "BlockName": "A",
+      "ApartmentNo": "A101",
+      "Rent": 1200,
+      "Status": "pending"
+    },
+    {
+      "ApartmentImage": "https://i.ibb.co/PN6FPPQ/greg-rivers-r-Ch-FUMw-Ae7-E-unsplash.jpg",
+      "FloorNo": 3,
+      "BlockName": "B",
+      "ApartmentNo": "B204",
+      "Rent": 1500,
+      "Status": "pending"
+    },
+    {
+      "ApartmentImage": "https://i.ibb.co/4pJs9TH/sidekix-media-1v-Mz2-Mclr-M-unsplash.jpg",
+      "FloorNo": 7,
+      "BlockName": "C",
+      "ApartmentNo": "C303",
+      "Rent": 1800,
+      "Status": "pending"
+    },
+    {
+      "ApartmentImage": "https://i.ibb.co/m5CGW14/sidekix-media-Wgk-A3-CSFrjc-unsplash.jpg",
+      "FloorNo": 2,
+      "BlockName": "D",
+      "ApartmentNo": "D102",
+      "Rent": 1100,
+      "Status": "pending"
+    },
+    {
+      "ApartmentImage": "https://i.ibb.co/84cN47m/nathan-van-egmond-9-LMRQd-Vv7hw-unsplash.jpg",
+      "FloorNo": 6,
+      "BlockName": "A",
+      "ApartmentNo": "A205",
+      "Rent": 1600,
+      "Status": "pending"
+    },
+    {
+      "ApartmentImage": "https://i.ibb.co/LCKrkS9/huy-nguyen-9vvp-nu-Va-Jk-unsplash.jpg",
+      "FloorNo": 4,
+      "BlockName": "B",
+      "ApartmentNo": "B402",
+      "Rent": 1400,
+      "Status": "pending"
+    },
+    {
+      "ApartmentImage": "https://i.ibb.co/h12h27w/huy-nguyen-AB-q9lw-CVv8-unsplash.jpg",
+      "FloorNo": 8,
+      "BlockName": "C",
+      "ApartmentNo": "C505",
+      "Rent": 2000,
+      "Status": "pending"
+    },
+    {
+      "ApartmentImage": "https://i.ibb.co/CJ3DCVD/jarek-ceborski-jn7u-Ve-Cdf6-U-unsplash.jpg",
+      "FloorNo": 3,
+      "BlockName": "D",
+      "ApartmentNo": "D103",
+      "Rent": 1250,
+      "Status": "pending"
+    },
+    {
+      "ApartmentImage": "https://i.ibb.co/rGBRgWr/patrick-perkins-3wyl-Drjx-H-E-unsplash.jpg",
+      "FloorNo": 5,
+      "BlockName": "A",
+      "ApartmentNo": "A303",
+      "Rent": 1700,
+      "Status": "pending"
+    }
+  ]
+  
+  
+  
+  
+  
