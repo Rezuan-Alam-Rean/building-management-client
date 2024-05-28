@@ -5,9 +5,6 @@ const Offers = () => {
 
 
 
-
-
-
     return (
 
         <div className=" mt-16 bg-slate-900 text-white w-full px-4 md:px-32" >
@@ -33,7 +30,7 @@ const Offers = () => {
                 </div>
                 <div className="w-full md:w-1/2  px-2">
                     <div className="card card-side bg-base-100 w-full h-56 shadow-xl z-0  image-full">
-                        <figure><img src={image2}alt="offer" /></figure>
+                        <figure><img src={image2}alt="offers" /></figure>
                         <div className="card-body  ">
                             <h2 className="card-title text-white">Seize the moment</h2>
                             <p className="text-slate-300">Save 15% or more when you book and stay before 1 October 2024</p>
