@@ -1,4 +1,4 @@
-import { FaUserCog } from 'react-icons/fa'
+// import { FaUserCog } from 'react-icons/fa'
 import MenuItem from '../Sidebar/MenuItem'
 import { BsGraphUp } from 'react-icons/bs'
 
