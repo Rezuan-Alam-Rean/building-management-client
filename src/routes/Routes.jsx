@@ -17,6 +17,7 @@ import MyBooking from '../pages/Dashboard/Host/MyBooking'
 import ManageUsers from '../pages/Dashboard/Admin/ManageUsers'
 import ManageBookings from '../pages/Dashboard/Host/ManageBookings'
 import HostRoute from './HostRoute'
+import RoomDetails from '../pages/RoomDetails/RoomDetails'
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +28,14 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+      },
+      {
+        path: '/room/:id',
+        element: (
+          <PrivateRoute>
+            <RoomDetails />
+          </PrivateRoute>
+        ),
       },
       {
         path: '/Apartment',

@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 
 /* eslint-disable react/prop-types */
-const Card = ({ room }) => {
+const ACard = ({ room }) => {
 
     const { user } = useAuth()
     // console.log(user?.email);
@@ -89,4 +89,4 @@ const Card = ({ room }) => {
     )
 }
 
-export default Card
+export default ACard

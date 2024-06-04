@@ -1,21 +1,33 @@
 import { useEffect, useState } from "react";
 import Container from "../Shared/Container";
-import RoomsCard from "./RoomsCard";
+
 import Heading from "../Shared/Heading";
 import Categories from "../Categories/Categories";
+import useAxiosCommon from "../../hooks/useAxiosCommon";
+import { useSearchParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import LoadingSpinner from "../Shared/LoadingSpinner";
+import Card from "./Card";
 
 const Rooms = () => {
 
-  const [rooms, setRooms] = useState([])
+  const axiosCommon = useAxiosCommon()
+  // eslint-disable-next-line no-unused-vars
+  const [params, setParams] = useSearchParams()
+  const category = params.get('category')
 
-  useEffect(() => {
+  console.log(category)
+  const { data: rooms = [], isLoading } = useQuery({
+    queryKey: ['rooms', category],
+    queryFn: async () => {
+      const { data } = await axiosCommon.get(`/rooms?category=${category}`)
 
-    fetch("./rooms.json")
-      .then(res => res.json())
-      .then(data => setRooms(data))
-  }
+      return data
+    },
+  })
 
-    , [])
+  if (isLoading) return <LoadingSpinner />
+
 
   return (
     <div>
@@ -29,7 +41,7 @@ const Rooms = () => {
         {rooms && rooms.length > 0 ? (
           <div className='pt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3'>
             {rooms.map(room => (
-              <RoomsCard key={room._id} room={room} />
+              <Card key={room._id} room={room} />
             ))}
           </div>
         ) : (

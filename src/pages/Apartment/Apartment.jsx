@@ -2,9 +2,9 @@
 import { useEffect, useState } from 'react';
 import Loader from '../../components/Shared/Loader';
 import Container from '../../components/Shared/Container';
-import Card from './Card';
 import { Helmet } from 'react-helmet-async';
 import { getAllRooms } from '../../api/rooms';
+import ACard from './ACard';
 
 
 const Apartment = () => {
@@ -50,7 +50,7 @@ const Apartment = () => {
 
 
           {currentRooms.map(room => (
-            <Card key={room._id} room={room} />
+            <ACard key={room._id} room={room} />
           ))}
         </div>
         <div className='flex justify-center mb-10'>

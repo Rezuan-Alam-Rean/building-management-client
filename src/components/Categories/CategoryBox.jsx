@@ -1,43 +1,50 @@
+import PropTypes from 'prop-types'
+import queryString from 'query-string'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import qs from 'query-string'
-/* eslint-disable react/prop-types */
-const CategoryBox = ({ label, icon: Icon, selected }) => {
-  console.log(selected)
+
+const CategoryBox = ({ label, icon: Icon }) => {
+  // eslint-disable-next-line no-unused-vars
   const [params, setParams] = useSearchParams()
+  const category = params.get('category')
+
   const navigate = useNavigate()
   const handleClick = () => {
-    let currentQuery = {}
-    if (params) {
-      currentQuery = qs.parse(params.toString())
-    }
-    const updatedQuery = { ...currentQuery, category: label }
-
-    const url = qs.stringifyUrl({
+    // 1. Create Query String
+    let currentQuery = { category: label }
+    const url = queryString.stringifyUrl({
       url: '/',
-      query: updatedQuery,
+      query: currentQuery,
     })
+    // url output---> /?category=label
 
+    // 2. Set query string in url
     navigate(url)
   }
-  params.get('category')
   return (
     <div
       onClick={handleClick}
       className={`flex 
-  flex-col 
-  items-center 
-  justify-center 
-  gap-2
-  p-3
-  
-  hover:text-white
-  transition
-  cursor-pointer ${selected ? 'border-b-white border-b-2 text-white' : ''}`}
+      flex-col 
+      items-center 
+      justify-center 
+      gap-2
+      p-3
+      
+      hover:text-white
+      transition
+      cursor-pointer  ${
+      category === label && 'border-b-white border-b-2 text-white'
+    } `}
     >
       <Icon size={26} />
-      <div className='text-sm font-medium'> {label}</div>
+      <div className='text-sm font-medium'>{label}</div>
     </div>
   )
+}
+
+CategoryBox.propTypes = {
+  label: PropTypes.string,
+  icon: PropTypes.elementType,
 }
 
 export default CategoryBox
