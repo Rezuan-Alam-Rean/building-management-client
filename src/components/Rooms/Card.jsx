@@ -41,12 +41,12 @@ const Card = ({ room }) => {
         </div>
       </div> */}
       <div className="group" >
-            <div className=" group-hover:scale-110 max-[350px] mx-auto space-y-2 rounded-2xl  px-6 py-2  md:w-[350px]">
+            <div className=" group-hover:scale-110 text-white max-[350px] mx-auto space-y-2 rounded-2xl  px-6 py-2  md:w-[350px]">
                
                 <img width={350} height={190} className="h-[190px] w-[350px] rounded-2xl pb-2 bg-gray-400" src={room?.image} alt="card navigate ui" />
                
                 <div className='font-semibold pt-3 text-lg'>{room?.location}</div>
-                <div className='font-light text-neutral-500'>5 nights .</div>
+                <div className='font-light '>5 nights .</div>
                 <div className='flex flex-row  items-center gap-1'>
                     <div className='font-semibold'>$ {room?.price}</div>
                     <div className='font-light'>per night</div>

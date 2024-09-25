@@ -29,8 +29,9 @@ const CategoryBox = ({ label, icon: Icon }) => {
       justify-center 
       gap-2
       p-3
-      
+      text-white
       hover:text-white
+      hover:border-b-2
       transition
       cursor-pointer  ${
       category === label && 'border-b-white border-b-2 text-white'

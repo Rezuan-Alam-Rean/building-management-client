@@ -27,7 +27,7 @@ const Home = () => {
      <SliderCards/>
       <Offers/>
       <About   ></About>
-      <DemoRooms></DemoRooms>
+      {/* <DemoRooms></DemoRooms> */}
       {/* <Banner></Banner> */}
 
     </div>

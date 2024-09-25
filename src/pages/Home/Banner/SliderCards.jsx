@@ -85,13 +85,13 @@ const SliderCards = () => {
                     {
                         cardData.map(
                             (d) => (
-                                <div key={d.id} className="max-[350px] mx-auto space-y-6 rounded-2xl  px-6 py-4  md:w-[350px]">
+                                <div key={d.id} className="max-[350px] mx-auto space-y-6 rounded-2xl text-white  px-6 py-4  md:w-[350px]">
                                     {/* Card Image */}
                                     <img width={350} height={190} className="h-[190px] w-[350px] rounded-2xl bg-gray-400" src={d.image} alt="card navigate ui" />
                                     {/* Card Heading */}
                                     <div className="space-y-2">
-                                        <h2 className="font-medium text-slate-800 sm:text-lg md:text-xl dark:text-white/90">{d.title}</h2>
-                                        <h2 className="font-medium text-slate-800  dark:text-white/90">{d.content}</h2>
+                                        <h2 className="font-medium  sm:text-lg md:text-xl dark:text-white/90">{d.title}</h2>
+                                        <h2 className="font-medium   dark:text-white/90">{d.content}</h2>
                                         {/* rating  */}
                                        
                                     </div>
